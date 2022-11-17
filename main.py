@@ -12,7 +12,7 @@ while True:
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
         if time() >= timeLock:
-            timeLock = time() + 60 #1 min
+            timeLock = time() + 60
             filename = f"tunkeilija-{datetime.now().strftime('%d-%m-%Y-%H-%M-%S')}.png"
             cv2.imwrite(filename, frame)
             webhook = discord.SyncWebhook.from_url("your_webhook_url")
