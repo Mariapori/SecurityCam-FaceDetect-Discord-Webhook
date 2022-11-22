@@ -10,7 +10,7 @@ timeLock = time()
 def WebhookSend(faceFrame):
     filename = f"tunkeilija-{datetime.now().strftime('%d-%m-%Y-%H-%M-%S')}.png"
     cv2.imwrite(filename, faceFrame)
-    webhook = discord.SyncWebhook.from_url("https://discord.com/api/webhooks/1042896663901122670/eRAmNF0XP25s4DNcE1wsVina8Cwm4m_t6thpsy5u4V7egT7UjitW3rh5Og0aC29v0Jd8")
+    webhook = discord.SyncWebhook.from_url("url_here")
     embed = discord.Embed(title="Tunkeilija!", description="Kasvot havaittu! :warning:")
     file = discord.File(filename, filename="image.png")
     embed.set_image(url="attachment://image.png")
